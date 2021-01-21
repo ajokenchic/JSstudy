@@ -1,13 +1,16 @@
 const Blockchain=require('./Blockchain');//Blockchain.js를 사용하기 위해 import(=require)
+const SHA256=require('./SHA256');
+
 const bitcoin=new Blockchain();//Blockchain 생성자의 인스턴스 생성.
 idx=0;
-while(idx!=4){
-    bitcoin.createNewBlock(parseInt(Math.random()*10000),'ABRACADABRA2','1234567890B');
-    console.log(bitcoin);//터미널에서 확인.
-    idx++;
-}
-bitcoin.createNewBlock(1233,'ABRACADABRA3','1234567890C');
-bitcoin.createNewBlock(1234,'ABRACADABRA1','1234567890A');
+bitcoin.createNewBlock(1233,13546315,"입금");
+bitcoin.createNewTransaction(50,'JOHN','TOM');
+bitcoin.createNewBlock(1234,13654635,"출금");
+bitcoin.createNewTransaction(530,'Jack','CHOI');
+bitcoin.createNewBlock(3234,87613165,"출금");
+bitcoin.createNewTransaction(150,'BANK','TOM');
+bitcoin.createNewBlock(1634,54648646,"출금");
+bitcoin.createNewTransaction(50,'JO','Timothy');
 
 
 console.log(bitcoin);//터미널에서 확인.

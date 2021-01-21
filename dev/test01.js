@@ -11,3 +11,5 @@ bitcoin.createNewBlock(1234,'ABRACADABRA1','1234567890A');
 
 
 console.log(bitcoin);//터미널에서 확인.
+
+//패치되는지 확인.
